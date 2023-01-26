@@ -6,7 +6,7 @@ RUN apt-get update
 RUN apt-get install -y git cups wget
 
 # Download latest nomachine-server
-RUN wget -O /tmp/nomachine.deb "https://www.nomachine.com/free/linux/64/deb" && apt-get install -y /tmp/nomachine.deb
+RUN wget -O /tmp/nomachine.deb "https://www.nomachine.com/free/arm/v8/deb" && apt-get install -y /tmp/nomachine.deb
 
 # ADD nxserver.sh
 RUN wget -O /nxserver.sh https://github.com/ramirezfx/ubuntu-mate-desktop-arm64/raw/main/nxserver.sh && chmod +x /nxserver.sh
