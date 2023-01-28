@@ -13,7 +13,10 @@ mv /usr/share/applications/firefox.desktop /usr/share/applications/static-firefo
 
 # Download and install Chromium Webbrowser
 # ----------------------------------------
-apt-get install -y chromium
+apt-get remove -y chromium-browser
+add-apt-repository -y ppa:saiarcot895/chromium-beta
+apt-get update -y
+apt-get install -y chromium-browser
 
 # Install Seafile-Cloud-Sync-Client
 # ---------------------------------
