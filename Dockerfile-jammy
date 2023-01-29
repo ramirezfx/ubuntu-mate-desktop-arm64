@@ -8,6 +8,8 @@ RUN apt-get install -y git cups wget
 # Create DATA-DIR
 RUN mkdir /data && chmod 777 /data
 
+# Install Multimedia-Codecs:
+RUN apt-get install -y libxvidcore4 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad gstreamer1.0-alsa gstreamer1.0-libav
 
 # Download latest nomachine-server
 RUN wget -O /tmp/nomachine.deb "https://www.nomachine.com/free/arm/v8/deb" && apt-get install -y /tmp/nomachine.deb
