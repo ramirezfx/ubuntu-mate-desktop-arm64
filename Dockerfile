@@ -5,6 +5,10 @@ ENV SHELL=/bin/bash
 RUN apt-get update
 RUN apt-get install -y git cups wget
 
+# Create DATA-DIR
+RUN mkdir /data && chmod 777 /data
+
+
 # Download latest nomachine-server
 RUN wget -O /tmp/nomachine.deb "https://www.nomachine.com/free/arm/v8/deb" && apt-get install -y /tmp/nomachine.deb
 
