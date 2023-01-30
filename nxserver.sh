@@ -16,7 +16,12 @@ ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 echo $LANG UTF8 > /etc/locale.gen && update-locale LANG=$LANG LANGUAGE
 
 # Create Customized Panel
-
+wget -O /home/$USER/vpsrestore.tar.gz "https://github.com/ramirezfx/ubuntu-mate-desktop-arm64/raw/main/vpsrestore.tar.gz"
+tar xzf /home/$USER/vpsrestore.tar.gz
+rm /home/$USER/vpsrestore.tar.gz
+chown -Rf $USER /home/$USER/vpsrestore
+chgrp -Rf $USER /home/$USER/vpsrestore
+runuser -l $USER -c "/home/$USER/vpsrestore/1restore.sh"
 
 # Start nxserver-software
 /etc/NX/nxserver --startup
