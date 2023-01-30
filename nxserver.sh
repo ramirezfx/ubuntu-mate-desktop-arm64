@@ -13,7 +13,7 @@ tar xzf /home/$USER/vpsrestore.tar.gz
 rm /home/$USER/vpsrestore.tar.gz
 chown -Rf $USER /home/$USER/vpsrestore
 chgrp -Rf $USER /home/$USER/vpsrestore
-runuser -l $USER -c "/vpsrestore/1restore.sh"
+# runuser -l $USER -c "/vpsrestore/1restore.sh"
 
 echo $USER':'$PASSWORD | chpasswd
 userdel -r mate
