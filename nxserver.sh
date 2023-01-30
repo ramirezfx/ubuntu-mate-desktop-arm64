@@ -15,6 +15,9 @@ ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # Set System-Language:
 echo $LANG UTF8 > /etc/locale.gen && update-locale LANG=$LANG LANGUAGE
 
+# Create Customized Panel
+
+
 # Start nxserver-software
 /etc/NX/nxserver --startup
 tail -f /usr/NX/var/log/nxserver.log
