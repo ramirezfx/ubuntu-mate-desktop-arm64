@@ -3,7 +3,7 @@ FROM ramirezfx/ubuntu-mate-baseimage-arm64:$VER
 ENV SHELL=/bin/bash
 
 RUN apt-get update
-RUN apt-get install -y git cups wget
+RUN apt-get install -y git cups wget openssh-server
 
 # Create DATA-DIR
 RUN mkdir /data && chmod 777 /data
