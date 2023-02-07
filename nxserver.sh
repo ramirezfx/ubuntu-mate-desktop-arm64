@@ -25,5 +25,5 @@ ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 echo $LANG UTF8 > /etc/locale.gen && update-locale LANG=$LANG LANGUAGE
 
 # Start nxserver-software
-/etc/NX/nxserver --startup
+service ssh start && /etc/NX/nxserver --startup
 tail -f /usr/NX/var/log/nxserver.log
