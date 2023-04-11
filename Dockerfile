@@ -2,8 +2,8 @@ ARG VER=latest
 FROM ramirezfx/ubuntu-mate-baseimage-arm64:$VER
 ENV SHELL=/bin/bash
 
-RUN apt-get update
-RUN apt-get install -y git cups wget
+RUN apt-get update && apt-get -y upgrade
+RUN apt-get install -y git cups wget curl
 
 # Create DATA-DIR
 RUN mkdir /data && chmod 777 /data
