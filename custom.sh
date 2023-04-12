@@ -37,6 +37,10 @@ apt install -y seafile-gui
 
 wget -O /tmp/vstudio.deb "https://az764295.vo.msecnd.net/stable/97dec172d3256f8ca4bfb2143f3f76b503ca0534/code_1.74.3-1673284080_arm64.deb" && apt-get install /tmp/vstudio.deb
 
+# Install duplicati-backup
+
+wget -O /tmp/duplicati.deb "https://updates.duplicati.com/beta/duplicati_2.0.6.3-1_all.deb" && apt-get install -y /tmp/duplicati.deb
+
 # Cleanup
 # -------
 apt remove snapd
