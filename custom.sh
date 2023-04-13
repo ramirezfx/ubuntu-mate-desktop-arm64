@@ -41,6 +41,11 @@ wget -O /tmp/vstudio.deb "https://az764295.vo.msecnd.net/stable/97dec172d3256f8c
 
 wget -O /tmp/duplicati.deb "https://updates.duplicati.com/beta/duplicati_2.0.6.3-1_all.deb" && apt-get install -y /tmp/duplicati.deb
 
+# Install Webapp-Manager
+# ----------------------
+
+wget -O /tmp/webapp-manager.deb "http://packages.linuxmint.com/pool/main/w/webapp-manager/webapp-manager_1.2.8_all.deb" && apt-get install -y http://packages.linuxmint.com/pool/main/w/webapp-manager/webapp-manager_1.2.8_all.deb
+
 # Cleanup
 # -------
 apt remove snapd
