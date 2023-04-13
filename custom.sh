@@ -46,6 +46,11 @@ wget -O /tmp/duplicati.deb "https://updates.duplicati.com/beta/duplicati_2.0.6.3
 
 wget -O /tmp/webapp-manager.deb "http://packages.linuxmint.com/pool/main/w/webapp-manager/webapp-manager_1.2.8_all.deb" && apt-get install -y http://packages.linuxmint.com/pool/main/w/webapp-manager/webapp-manager_1.2.8_all.deb
 
+# Install KMyMoney
+# ----------------
+
+apt install -y kmymoney breeze
+
 # Cleanup
 # -------
 apt remove snapd
